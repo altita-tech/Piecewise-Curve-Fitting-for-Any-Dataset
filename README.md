@@ -145,7 +145,7 @@ As you can see, the objective function value at global minima is much less than 
 
 |                       | Local Minima                                                | Global Minima                                              |
 |-----------------------|-------------------------------------------------------------|------------------------------------------------------------|
-| Method                | Final Objective Function Value                              | Final Objective Function Value                             |
+| Final Objective Function Value                | 0.001538723                              | 0.000137076                             |
 | Equation 1            | y1 = -0.0000224932*x^2 + 0.0031112500*x + 4.0187622232       | y1 = -0.0001649649*x^2 + 0.0070842073*x + 3.9975295101      |
 | Equation 2            | y2 = 0.0000025373*x^2 + 0.0000485654*x + 4.1124484546       | y2 = -0.0000210524*x^2 + 0.0027668325*x + 4.0299098208      |
 | Equation 3            | y3 = 0.0000002261*x^2 + 0.0005712989*x + 4.0828909146       | y3 = 0.0000004615*x^2 + 0.0004863585*x + 4.0903423830       |
@@ -186,7 +186,7 @@ It’s obvious to see that 3 piecewise equation with global minima has the minim
 
 
 ## Homework
-Try dataset2 and dataset3 by yourself. For dataset 2, my result is: 
+Try Excel dataset2 and dataset3 by yourself. For dataset 2, my result is: 
 <table style="width:100%; text-align:center;">
   <tr>
     <td style="width: 100%;">
