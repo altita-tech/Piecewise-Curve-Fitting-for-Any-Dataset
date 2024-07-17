@@ -87,7 +87,7 @@ MATLAB的 `fmincon()` 函数在优化工具箱中可以找到系统优化问题�
 - 'sqp-legacy'
 - 'active-set'
 
-然而，局部最优解通常不是最优解（称为全局最优解）。这是因为梯度下降算法可能会停留在局部最优解处并停止迭代。
+然而，局部最优解通常不是最优解，这是因为梯度下降算法可能会停留在局部最优解处并停止迭代。
 
 ## 解决方案2：使用 `fmincon()` 进行全局优化
 
@@ -102,26 +102,14 @@ MATLAB的 `fmincon()` 函数在优化工具箱中可以找到系统优化问题�
 <table style="width:100%; text-align:center;">
   <tr>
     <td style="width: 50%;">
-      <img src="Images/2_piecewise_best_fit_equation_fmincon_local.png" style="width: 100%; height: auto; margin: 10px 10px;">
-      <br style="clear:both;">
-      <p style="text-align:center;">图3：2段，局部最优解</p>
-    </td>
-    <td style="width: 50%;">
-      <img src="Images/2_piecewise_best_fit_equation_fmincon_global.png" style="width: 100%; height: auto; margin: 10px 10px;">
-      <br style="clear:both;">
-      <p style="text-align:center;">图4：2段，全局最优解</p>
-    </td>
-  </tr>
-  <tr>
-    <td style="width: 50%;">
       <img src="Images/3_piecewise_best_fit_equation_fmincon_local.png" style="width: 100%; height: auto; margin: 10px 10px;">
       <br style="clear:both;">
-      <p style="text-align:center;">图5：3段，局部最优解</p>
+      <p style="text-align:center;">图3：3段，局部最优解</p>
     </td>
     <td style="width: 50%;">
       <img src="Images/3_piecewise_best_fit_equation_fmincon_global.png" style="width: 100%; height: auto; margin: 10px 10px;">
       <br style="clear:both;">
-      <p style="text-align:center;">图6：3段，全局最优解</p>
+      <p style="text-align:center;">图4：3段，全局最优解</p>
     </td>
   </tr>
 </table>
@@ -160,7 +148,32 @@ MATLAB的 `fmincon()` 函数在优化工具箱中可以找到系统优化问题�
 
 显然可以看出，具有全局最优解的3个分段函数具有最小的目标函数值，这意味着曲线拟合最准确。同时，通过视觉检查没有过拟合问题。
 
-### 结果比较
+<table style="width:100%; text-align:center;">
+  <tr>
+    <td style="width: 50%;">
+      <img src="Images/2_piecewise_best_fit_equation_fmincon_local.png" style="width: 100%; height: auto; margin: 10px 10px;">
+      <br style="clear:both;">
+      <p style="text-align:center;">图5：2段，局部最优解</p>
+    </td>
+    <td style="width: 50%;">
+      <img src="Images/2_piecewise_best_fit_equation_fmincon_global.png" style="width: 100%; height: auto; margin: 10px 10px;">
+      <br style="clear:both;">
+      <p style="text-align:center;">图6：2段，全局最优解</p>
+    </td>
+  </tr>
+  <tr>
+    <td style="width: 50%;">
+      <img src="Images/3_piecewise_best_fit_equation_fmincon_local.png" style="width: 100%; height: auto; margin: 10px 10px;">
+      <br style="clear:both;">
+      <p style="text-align:center;">图7：3段，局部最优解</p>
+    </td>
+    <td style="width: 50%;">
+      <img src="Images/3_piecewise_best_fit_equation_fmincon_global.png" style="width: 100%; height: auto; margin: 10px 10px;">
+      <br style="clear:both;">
+      <p style="text-align:center;">图8：3段，全局最优解</p>
+    </td>
+  </tr>
+</table>
 
 | 方法                    | 2分段函数 <br>局部最优解 | 2分段函数 <br>全局最优解 | 3分段函数 <br>局部最优解 | 3分段函数 <br>全局最优解 |
 | ----------------------- | ------------------------ | ------------------------ | ------------------------ | ------------------------ |
@@ -180,7 +193,7 @@ MATLAB的 `fmincon()` 函数在优化工具箱中可以找到系统优化问题�
     <td style="width: 100%;">
       <img src="Images/4_piecewise_best_fit_equation_fmincon_global.png" style="max-width: 100%; height: auto; margin: 10px 10px;">
       <br style="clear:both;">
-      <p style="text-align:center;">图 7：4个分段函数，全局最优解</p>
+      <p style="text-align:center;">图9：4个分段函数，全局最优解</p>
     </td>
   </tr>
 </table>

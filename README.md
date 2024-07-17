@@ -112,26 +112,14 @@ As we can see, the global minima solution (right) has better curve fitting resul
 <table style="width:100%; text-align:center;">
   <tr>
     <td style="width: 50%;">
-      <img src="Images/2_piecewise_best_fit_equation_fmincon_local.png" style="width: 100%; height: auto; margin: 10px 10px;">
-      <br style="clear:both;">
-      <p style="text-align:center;">Figure 3: 2 piecewise, local minima</p>
-    </td>
-    <td style="width: 50%;">
-      <img src="Images/2_piecewise_best_fit_equation_fmincon_global.png" style="width: 100%; height: auto; margin: 10px 10px;">
-      <br style="clear:both;">
-      <p style="text-align:center;">Figure 4: 2 piecewise, global minima</p>
-    </td>
-  </tr>
-  <tr>
-    <td style="width: 50%;">
       <img src="Images/3_piecewise_best_fit_equation_fmincon_local.png" style="width: 100%; height: auto; margin: 10px 10px;">
       <br style="clear:both;">
-      <p style="text-align:center;">Figure 5: 3 piecewise, local minima</p>
+      <p style="text-align:center;">Figure 3: 3 piecewise, local minima</p>
     </td>
     <td style="width: 50%;">
       <img src="Images/3_piecewise_best_fit_equation_fmincon_global.png" style="width: 100%; height: auto; margin: 10px 10px;">
       <br style="clear:both;">
-      <p style="text-align:center;">Figure 6: 3 piecewise, global minima</p>
+      <p style="text-align:center;">Figure 4: 3 piecewise, global minima</p>
     </td>
   </tr>
 </table>
@@ -141,6 +129,7 @@ As we can see, the global minima solution (right) has better curve fitting resul
 The numerical results are given below. Note that everything you run the code, the result will be slightly different. This is due to the nature behind machine learning and system optimization algorithm, which is the probability. However, the result should NOT vary too much. 
 
 As you can see, the objective function value at global minima is much less than the local minima. It approves that the curve fitting result is better. 
+
 
 
 |                       | Local Minima                                                | Global Minima                                              |
@@ -172,7 +161,32 @@ I tried 4 combinations and their result table:
 It’s obvious to see that 3 piecewise equation with global minima has the minimum objective function, which means the curving fitting is most accurate. Meanwhile, there is no over-fitting issue by visual inspection.
 
 
-### Results Comparison
+<table style="width:100%; text-align:center;">
+  <tr>
+    <td style="width: 50%;">
+      <img src="Images/2_piecewise_best_fit_equation_fmincon_local.png" style="width: 100%; height: auto; margin: 10px 10px;">
+      <br style="clear:both;">
+      <p style="text-align:center;">Figure 5: 2 piecewise, local minima</p>
+    </td>
+    <td style="width: 50%;">
+      <img src="Images/2_piecewise_best_fit_equation_fmincon_global.png" style="width: 100%; height: auto; margin: 10px 10px;">
+      <br style="clear:both;">
+      <p style="text-align:center;">Figure 6: 2 piecewise, global minima</p>
+    </td>
+  </tr>
+  <tr>
+    <td style="width: 50%;">
+      <img src="Images/3_piecewise_best_fit_equation_fmincon_local.png" style="width: 100%; height: auto; margin: 10px 10px;">
+      <br style="clear:both;">
+      <p style="text-align:center;">Figure 7: 3 piecewise, local minima</p>
+    </td>
+    <td style="width: 50%;">
+      <img src="Images/3_piecewise_best_fit_equation_fmincon_global.png" style="width: 100%; height: auto; margin: 10px 10px;">
+      <br style="clear:both;">
+      <p style="text-align:center;">Figure 8: 3 piecewise, global minima</p>
+    </td>
+  </tr>
+</table>
 
 | Method                    | 2 Piecewise <br>Local Minima | 2 Piecewise <br>Global Minima | 3 Piecewise <br>Local Minima | 3 Piecewise <br>Global Minima |
 | ------------------------- | ------------------------ | ------------------------- | ------------------------ | ------------------------- |
@@ -192,7 +206,7 @@ Try Excel dataset2 and dataset3 by yourself. For dataset 2, my result is:
     <td style="width: 100%;">
       <img src="Images/4_piecewise_best_fit_equation_fmincon_global.png" style="max-width: 100%; height: auto; margin: 10px 10px;">
       <br style="clear:both;">
-      <p style="text-align:center;">Figure 7: 4 piecewise, global minima</p>
+      <p style="text-align:center;">Figure 9: 4 piecewise, global minima</p>
     </td>
   </tr>
 </table>
