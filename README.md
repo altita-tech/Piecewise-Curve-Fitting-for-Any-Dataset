@@ -82,7 +82,8 @@ $$
 
 ## Solution 1: Local Optimization with `fmincon()`
 
-**Local Optimization Code:** `find_best_fit_3piecewise_equ_fmincon_local.m`
+**Local Optimization Code:** [find_best_fit_3piecewise_equ_fmincon_local.m](MATLAB_script/find_best_fit_3piecewise_equ_fmincon_local.m)
+
 
 MATLAB's `fmincon()` function in the Optimization Toolbox can find a local minimum solution for system optimization problems. It supports multiple algorithms such as:
 - 'interior-point' (default)
@@ -98,7 +99,7 @@ However, a local minima usually is not the most optimal solution (called global 
 
 ## Solution 2: Global Optimization with `fmincon()`
 
-**Global Optimization Code:** `find_best_fit_3piecewise_equ_fmincon_global.m`
+**Global Optimization Code:** [find_best_fit_3piecewise_equ_fmincon_global.m](MATLAB_script/find_best_fit_3piecewise_equ_fmincon_global.m)
 
 Improvements over solution 1 ensure finding a global minimum solution.
 
@@ -110,18 +111,31 @@ As we can see, the global minima solution (right) has better curve fitting resul
 
 <table style="width:100%; text-align:center;">
   <tr>
-    <td style="width: 45%;">
-      <img src="Images/3_piecewise_best_fit_equation_fmincon_local.png" style="width: 100%; height: auto; margin: 10px 10px;">
-      <br>
-      Figure 1: Local minima solution
+    <td style="width: 50%;">
+      <img src="Images/2_piecewise_best_fit_equation_fmincon_local.png" style="width: 100%; height: auto; margin: 10px 10px;">
+      <br style="clear:both;">
+      <p style="text-align:center;">Figure 3: 2 piecewise, local minima</p>
     </td>
-    <td style="width: 45%;">
+    <td style="width: 50%;">
+      <img src="Images/2_piecewise_best_fit_equation_fmincon_global.png" style="width: 100%; height: auto; margin: 10px 10px;">
+      <br style="clear:both;">
+      <p style="text-align:center;">Figure 4: 2 piecewise, global minima</p>
+    </td>
+  </tr>
+  <tr>
+    <td style="width: 50%;">
+      <img src="Images/3_piecewise_best_fit_equation_fmincon_local.png" style="width: 100%; height: auto; margin: 10px 10px;">
+      <br style="clear:both;">
+      <p style="text-align:center;">Figure 5: 3 piecewise, local minima</p>
+    </td>
+    <td style="width: 50%;">
       <img src="Images/3_piecewise_best_fit_equation_fmincon_global.png" style="width: 100%; height: auto; margin: 10px 10px;">
-      <br>
-      Figure 2: Global minima solution
+      <br style="clear:both;">
+      <p style="text-align:center;">Figure 6: 3 piecewise, global minima</p>
     </td>
   </tr>
 </table>
+
 
 ### Numerical Results
 The numerical results are given below. Note that everything you run the code, the result will be slightly different. This is due to the nature behind machine learning and system optimization algorithm, which is the probability. However, the result should NOT vary too much. 
@@ -149,20 +163,59 @@ To find the most suitable piecewise curve fitting model, follow these steps:
 
 I tried 4 combinations and their result table:
 
-- **a.** 2 piecewise equation, local minima: [find_best_fit_2piecewise_equ_fmincon_local.m](path/to/2_piecewise_equ_local_min_script.m)
-- **b.** 2 piecewise equation, global minima: [find_best_fit_2piecewise_equ_fmincon_global.m](path/to/2_piecewise_equ_global_min_script.m)
-- **c.** 3 piecewise equation, local minima: [find_best_fit_3piecewise_equ_fmincon_local.m](path/to/3_piecewise_equ_local_min_script.m)
-- **d.** 3 piecewise equation, global minima: [find_best_fit_3piecewise_equ_fmincon_global.m](path/to/3_piecewise_equ_global_min_script.m)
+- **a.** 2 piecewise equation, local minima: [find_best_fit_2piecewise_equ_fmincon_local.m](MATLAB_script/2_piecewise_equ_local_min_script.m)
+- **b.** 2 piecewise equation, global minima: [find_best_fit_2piecewise_equ_fmincon_global.m](MATLAB_script/2_piecewise_equ_global_min_script.m)
+- **c.** 3 piecewise equation, local minima: [find_best_fit_3piecewise_equ_fmincon_local.m](MATLAB_script/3_piecewise_equ_local_min_script.m)
+- **d.** 3 piecewise equation, global minima: [find_best_fit_3piecewise_equ_fmincon_global.m](MATLAB_script/3_piecewise_equ_global_min_script.m)
 
 
 It’s obvious to see that 3 piecewise equation with global minima has the minimum objective function, which means the curving fitting is most accurate. Meanwhile, there is no over-fitting issue by visual inspection.
 
 
 ### Combination Results
-| Method | Final Objective Function Value | Equation 1 | Equation 2 | Equation 3 | Breakpoint 1 | Breakpoint 2 |
-| ------ | ----------------------------- | ---------- | ---------- | ---------- | ------------ | ------------ |
-| 2 Piecewise Local Minima | 0.000678959 | y1 = -0.0000624627*x^2 + 0.0049620077*x + 4.0058089647 | y2 = -0.0000000150*x^2 + 0.0006255810*x + 4.0810903548 | / | 34.72042092 | / |
-| 2 Piecewise Global Minima | 0.000522159 | y1 = -0.0000472164*x^2 + 0.0043732929*x + 4.0085296766 | y2 = 0.0000000510*x^2 + 0.0005919077*x + 4.0841573823 | / | 40 | / |
-| 3 Piecewise Local Minima | 0.001538723 | y1 = -0.0000224932*x^2 + 0.0031112500*x + 4.0187622232 | y2 = 0.0000025373*x^2 + 0.0000485654*x + 4.1124484546 | y3 = 0.0000002261*x^2 + 0.0005712989*x + 4.0828909146 | 61.17915627 | 113.0883872 |
-| 3 Piecewise Global Minima | 0.000137076 | y1 = -0.0001649649*x^2 + 0.0070842073*x + 3.9975295101 | y2 = -0.0000210524*x^2 + 0.0027668325*x + 4.0299098208 | y3 = 0.0000004615*x^2 + 0.0004863585*x + 4.0903423830 | 15 | 53 |
+
+| Method                    | 2 Piecewise <br>Local Minima | 2 Piecewise <br>Global Minima | 3 Piecewise <br>Local Minima | 3 Piecewise <br>Global Minima |
+| ------------------------- | ------------------------ | ------------------------- | ------------------------ | ------------------------- |
+| Final Objective Function Value | 0.000678959              | 0.000522159               | 0.001538723              | 0.000137076               |
+| Equation 1                | y1 = -0.0000624627*x^2 + 0.0049620077*x + 4.0058089647 | y1 = -0.0000472164*x^2 + 0.0043732929*x + 4.0085296766 | y1 = -0.0000224932*x^2 + 0.0031112500*x + 4.0187622232 | y1 = -0.0001649649*x^2 + 0.0070842073*x + 3.9975295101 |
+| Equation 2                | y2 = -0.0000000150*x^2 + 0.0006255810*x + 4.0810903548 | y2 = 0.0000000510*x^2 + 0.0005919077*x + 4.0841573823 | y2 = 0.0000025373*x^2 + 0.0000485654*x + 4.1124484546 | y2 = -0.0000210524*x^2 + 0.0027668325*x + 4.0299098208 |
+| Equation 3                | /                        | /                         | y3 = 0.0000002261*x^2 + 0.0005712989*x + 4.0828909146 | y3 = 0.0000004615*x^2 + 0.0004863585*x + 4.0903423830 |
+| Breakpoint 1              | 34.72042092              | 40                        | 61.17915627              | 15                        |
+| Breakpoint 2              | /                        | /                         | 113.0883872              | 53                        |
+
+
+
+## Homework
+Try dataset2 and dataset3 by yourself. For dataset 2, my result is: 
+<table style="width:100%; text-align:center;">
+  <tr>
+    <td style="width: 100%;">
+      <img src="Images/4_piecewise_best_fit_equation_fmincon_global.png" style="max-width: 100%; height: auto; margin: 10px 10px;">
+      <br style="clear:both;">
+      <p style="text-align:center;">Figure 7: 4 piecewise, global minima</p>
+    </td>
+  </tr>
+</table>
+
+
+
+
+## Contact Us
+<div style="display: flex; justify-content: space-between; align-items: flex-start;">
+  <div>
+    <ul style="list-style-type: disc; padding-left: 20px; margin: 0;">
+      <li><strong>Company Website:</strong> <a href="https://altita-tech.com/">https://altita-tech.com/en/</a></li>
+      <li><strong>Sales:</strong> <a href="mailto:sales@altita-tech.com">sales@altita-tech.com</a></li>
+      <li><strong>Technical Support:</strong> <a href="mailto:tech@altita-tech.com">tech@altita-tech.com</a></li>
+    </ul>
+  </div>
+</div>
+
+<table style="width:100%; text-align:center;">
+  <tr>
+    <td style="width: 100%;">
+      <img src="Images/logo-altita-en.png" style="max-width: 100%; height: auto; margin: 10px 10px;">
+    </td>
+  </tr>
+</table>
 
