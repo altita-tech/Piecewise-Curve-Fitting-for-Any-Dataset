@@ -82,7 +82,7 @@ $$
 
 ## Solution 1: Local Optimization with `fmincon()`
 
-**Local Optimization Code:** [find_best_fit_3piecewise_equ_fmincon_local.m](MATLAB_script/find_best_fit_3piecewise_equ_fmincon_local.m)
+**Local Optimization Code:** [find_best_fit_3piecewise_equ_fmincon_local.m](MATLAB_scripts/find_best_fit_3piecewise_equ_fmincon_local.m)
 
 
 MATLAB's `fmincon()` function in the Optimization Toolbox can find a local minimum solution for system optimization problems. It supports multiple algorithms such as:
@@ -99,7 +99,7 @@ However, a local minima usually is not the most optimal solution (called global 
 
 ## Solution 2: Global Optimization with `fmincon()`
 
-**Global Optimization Code:** [find_best_fit_3piecewise_equ_fmincon_global.m](MATLAB_script/find_best_fit_3piecewise_equ_fmincon_global.m)
+**Global Optimization Code:** [find_best_fit_3piecewise_equ_fmincon_global.m](MATLAB_scripts/find_best_fit_3piecewise_equ_fmincon_global.m)
 
 Improvements over solution 1 ensure finding a global minimum solution.
 
@@ -163,10 +163,10 @@ To find the most suitable piecewise curve fitting model, follow these steps:
 
 I tried 4 combinations and their result table:
 
-- **a.** 2 piecewise equation, local minima: [find_best_fit_2piecewise_equ_fmincon_local.m](MATLAB_script/2_piecewise_equ_local_min_script.m)
-- **b.** 2 piecewise equation, global minima: [find_best_fit_2piecewise_equ_fmincon_global.m](MATLAB_script/2_piecewise_equ_global_min_script.m)
-- **c.** 3 piecewise equation, local minima: [find_best_fit_3piecewise_equ_fmincon_local.m](MATLAB_script/3_piecewise_equ_local_min_script.m)
-- **d.** 3 piecewise equation, global minima: [find_best_fit_3piecewise_equ_fmincon_global.m](MATLAB_script/3_piecewise_equ_global_min_script.m)
+- **a.** 2 piecewise equation, local minima: [find_best_fit_2piecewise_equ_fmincon_local.m](MATLAB_scripts/2_piecewise_equ_local_min_script.m)
+- **b.** 2 piecewise equation, global minima: [find_best_fit_2piecewise_equ_fmincon_global.m](MATLAB_scripts/2_piecewise_equ_global_min_script.m)
+- **c.** 3 piecewise equation, local minima: [find_best_fit_3piecewise_equ_fmincon_local.m](MATLAB_scripts/3_piecewise_equ_local_min_script.m)
+- **d.** 3 piecewise equation, global minima: [find_best_fit_3piecewise_equ_fmincon_global.m](MATLAB_scripts/3_piecewise_equ_global_min_script.m)
 
 
 It’s obvious to see that 3 piecewise equation with global minima has the minimum objective function, which means the curving fitting is most accurate. Meanwhile, there is no over-fitting issue by visual inspection.
