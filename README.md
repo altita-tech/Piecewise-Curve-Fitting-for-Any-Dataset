@@ -172,7 +172,7 @@ I tried 4 combinations and their result table:
 It’s obvious to see that 3 piecewise equation with global minima has the minimum objective function, which means the curving fitting is most accurate. Meanwhile, there is no over-fitting issue by visual inspection.
 
 
-### Combination Results
+### Results Comparison
 
 | Method                    | 2 Piecewise <br>Local Minima | 2 Piecewise <br>Global Minima | 3 Piecewise <br>Local Minima | 3 Piecewise <br>Global Minima |
 | ------------------------- | ------------------------ | ------------------------- | ------------------------ | ------------------------- |
@@ -204,7 +204,7 @@ Try Excel dataset2 and dataset3 by yourself. For dataset 2, my result is:
 <div style="display: flex; justify-content: space-between; align-items: flex-start;">
   <div>
     <ul style="list-style-type: disc; padding-left: 20px; margin: 0;">
-      <li><strong>Company Website:</strong> <a href="https://altita-tech.com/">https://altita-tech.com/en/</a></li>
+      <li><strong>Company Website:</strong> <a href="https://altita-tech.com/en/">https://altita-tech.com/en/</a></li>
       <li><strong>Sales:</strong> <a href="mailto:sales@altita-tech.com">sales@altita-tech.com</a></li>
       <li><strong>Technical Support:</strong> <a href="mailto:tech@altita-tech.com">tech@altita-tech.com</a></li>
     </ul>
