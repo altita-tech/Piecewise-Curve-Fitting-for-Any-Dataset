@@ -3,7 +3,7 @@ close all
 clear all
 
 % Load data
-filename = 'dataset.xlsx';
+filename = 'dataset1.xlsx';
 data = readtable(filename, 'Range', 'A:B');
 x_data = table2array(data(:, 1));
 y_data = table2array(data(:, 2));
